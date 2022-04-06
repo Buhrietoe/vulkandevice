@@ -95,7 +95,7 @@ func PrintInfo(v *VulkanDeviceInfo) {
 
 	table := tablewriter.CreateTable()
 	table.UTF8Box()
-	table.AddTitle("VULKAN PROPERTIES AND SURFACE CAPABILITES")
+	table.AddTitle("VULKAN DEVICE")
 	table.AddRow("Physical Device Name", vk.ToString(gpuProperties.DeviceName[:]))
 	table.AddRow("Physical Device Vendor", fmt.Sprintf("%x", gpuProperties.VendorID))
 	if gpuProperties.DeviceType != vk.PhysicalDeviceTypeOther {
